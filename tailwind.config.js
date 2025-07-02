@@ -56,34 +56,118 @@ module.exports = {
         DEFAULT: {
           css: {
             maxWidth: 'none',
-            color: 'hsl(var(--foreground))',
+            '--tw-prose-body': 'hsl(var(--tw-prose-body))',
+            '--tw-prose-headings': 'hsl(var(--tw-prose-headings))',
+            '--tw-prose-lead': 'hsl(var(--tw-prose-lead))',
+            '--tw-prose-links': 'hsl(var(--tw-prose-links))',
+            '--tw-prose-bold': 'hsl(var(--tw-prose-bold))',
+            '--tw-prose-counters': 'hsl(var(--tw-prose-counters))',
+            '--tw-prose-bullets': 'hsl(var(--tw-prose-bullets))',
+            '--tw-prose-hr': 'hsl(var(--tw-prose-hr))',
+            '--tw-prose-quotes': 'hsl(var(--tw-prose-quotes))',
+            '--tw-prose-quote-borders': 'hsl(var(--tw-prose-quote-borders))',
+            '--tw-prose-captions': 'hsl(var(--tw-prose-captions))',
+            '--tw-prose-code': 'hsl(var(--tw-prose-code))',
+            '--tw-prose-pre-code': 'hsl(var(--tw-prose-pre-code))',
+            '--tw-prose-pre-bg': 'hsl(var(--tw-prose-pre-bg))',
+            '--tw-prose-th-borders': 'hsl(var(--tw-prose-th-borders))',
+            '--tw-prose-td-borders': 'hsl(var(--tw-prose-td-borders))',
+            color: 'var(--tw-prose-body)',
+            p: {
+              color: 'var(--tw-prose-body)',
+            },
+            strong: {
+              color: 'var(--tw-prose-bold)',
+              fontWeight: '600',
+            },
             a: {
-              color: 'hsl(var(--primary))',
-              textDecoration: 'underline',
+              color: 'var(--tw-prose-links)',
+              textDecoration: 'none',
               fontWeight: '500',
+              '&:hover': {
+                textDecoration: 'underline',
+              },
             },
-            '[data-rehype-pretty-code-fragment]': {
-              position: 'relative',
+            h1: {
+              color: 'var(--tw-prose-headings)',
             },
-            pre: {
-              padding: '0',
-              color: 'hsl(var(--muted-foreground))',
-              backgroundColor: 'hsl(var(--muted))',
-              overflowX: 'auto',
-              border: '1px solid hsl(var(--border))',
+            h2: {
+              color: 'var(--tw-prose-headings)',
+            },
+            h3: {
+              color: 'var(--tw-prose-headings)',
+            },
+            h4: {
+              color: 'var(--tw-prose-headings)',
+            },
+            h5: {
+              color: 'var(--tw-prose-headings)',
+            },
+            h6: {
+              color: 'var(--tw-prose-headings)',
+            },
+            blockquote: {
+              color: 'var(--tw-prose-quotes)',
+              borderLeftColor: 'var(--tw-prose-quote-borders)',
             },
             code: {
+              color: 'var(--tw-prose-code)',
               backgroundColor: 'hsl(var(--muted))',
               padding: '0.25rem 0.375rem',
               borderRadius: '0.25rem',
               fontWeight: '600',
+            },
+            'code::before': {
+              content: '""',
+            },
+            'code::after': {
+              content: '""',
+            },
+            pre: {
+              color: 'var(--tw-prose-pre-code)',
+              backgroundColor: 'var(--tw-prose-pre-bg)',
+              padding: '1rem',
+              borderRadius: '0.5rem',
+              overflowX: 'auto',
               border: '1px solid hsl(var(--border))',
             },
             'pre code': {
               backgroundColor: 'transparent',
+              color: 'inherit',
               padding: '0',
-              border: 'none',
               fontWeight: 'normal',
+            },
+            '[data-rehype-pretty-code-fragment]': {
+              position: 'relative',
+            },
+            ul: {
+              color: 'var(--tw-prose-body)',
+            },
+            ol: {
+              color: 'var(--tw-prose-body)',
+            },
+            li: {
+              color: 'var(--tw-prose-body)',
+            },
+            'ul > li::marker': {
+              color: 'var(--tw-prose-bullets)',
+            },
+            'ol > li::marker': {
+              color: 'var(--tw-prose-counters)',
+            },
+            table: {
+              borderColor: 'var(--tw-prose-th-borders)',
+            },
+            thead: {
+              borderBottomColor: 'var(--tw-prose-th-borders)',
+            },
+            'thead th': {
+              color: 'var(--tw-prose-headings)',
+              borderColor: 'var(--tw-prose-th-borders)',
+            },
+            'tbody td': {
+              color: 'var(--tw-prose-body)',
+              borderColor: 'var(--tw-prose-td-borders)',
             },
           },
         },

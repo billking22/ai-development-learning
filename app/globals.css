@@ -29,6 +29,24 @@
     --chart-3: 197 37% 24%;
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
+    
+    /* Prose styles for light theme */
+    --tw-prose-body: 222.2 84% 4.9%;
+    --tw-prose-headings: 222.2 84% 4.9%;
+    --tw-prose-lead: 222.2 84% 4.9%;
+    --tw-prose-links: 221.2 83.2% 53.3%;
+    --tw-prose-bold: 222.2 84% 4.9%;
+    --tw-prose-counters: 215.4 16.3% 46.9%;
+    --tw-prose-bullets: 215.4 16.3% 46.9%;
+    --tw-prose-hr: 214.3 31.8% 91.4%;
+    --tw-prose-quotes: 222.2 84% 4.9%;
+    --tw-prose-quote-borders: 214.3 31.8% 91.4%;
+    --tw-prose-captions: 215.4 16.3% 46.9%;
+    --tw-prose-code: 222.2 84% 4.9%;
+    --tw-prose-pre-code: 210 40% 98%;
+    --tw-prose-pre-bg: 210 40% 96%;
+    --tw-prose-th-borders: 214.3 31.8% 91.4%;
+    --tw-prose-td-borders: 214.3 31.8% 91.4%;
   }
 
   .dark {
@@ -56,6 +74,40 @@
     --chart-3: 30 80% 55%;
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
+    
+    /* Prose styles for dark theme */
+    --tw-prose-body: 210 40% 98%;
+    --tw-prose-headings: 210 40% 98%;
+    --tw-prose-lead: 210 40% 98%;
+    --tw-prose-links: 217.2 91.2% 59.8%;
+    --tw-prose-bold: 210 40% 98%;
+    --tw-prose-counters: 215 20.2% 65.1%;
+    --tw-prose-bullets: 215 20.2% 65.1%;
+    --tw-prose-hr: 217.2 32.6% 17.5%;
+    --tw-prose-quotes: 210 40% 98%;
+    --tw-prose-quote-borders: 217.2 32.6% 17.5%;
+    --tw-prose-captions: 215 20.2% 65.1%;
+    --tw-prose-code: 210 40% 98%;
+    --tw-prose-pre-code: 210 40% 98%;
+    --tw-prose-pre-bg: 217.2 32.6% 17.5%;
+    --tw-prose-th-borders: 217.2 32.6% 17.5%;
+    --tw-prose-td-borders: 217.2 32.6% 17.5%;
+    --tw-prose-invert-body: 222.2 84% 4.9%;
+    --tw-prose-invert-headings: 222.2 84% 4.9%;
+    --tw-prose-invert-lead: 222.2 84% 4.9%;
+    --tw-prose-invert-links: 221.2 83.2% 53.3%;
+    --tw-prose-invert-bold: 222.2 84% 4.9%;
+    --tw-prose-invert-counters: 215.4 16.3% 46.9%;
+    --tw-prose-invert-bullets: 215.4 16.3% 46.9%;
+    --tw-prose-invert-hr: 214.3 31.8% 91.4%;
+    --tw-prose-invert-quotes: 222.2 84% 4.9%;
+    --tw-prose-invert-quote-borders: 214.3 31.8% 91.4%;
+    --tw-prose-invert-captions: 215.4 16.3% 46.9%;
+    --tw-prose-invert-code: 222.2 84% 4.9%;
+    --tw-prose-invert-pre-code: 210 40% 98%;
+    --tw-prose-invert-pre-bg: 210 40% 96%;
+    --tw-prose-invert-th-borders: 214.3 31.8% 91.4%;
+    --tw-prose-invert-td-borders: 214.3 31.8% 91.4%;
   }
 }
 
@@ -70,39 +122,88 @@
 
 /* 代码高亮样式 */
 .prose pre {
-  @apply overflow-x-auto rounded-lg border bg-muted p-4;
+  @apply overflow-x-auto rounded-lg border p-4;
+  background-color: hsl(var(--tw-prose-pre-bg));
+  color: hsl(var(--tw-prose-pre-code));
 }
 
 .prose code {
-  @apply rounded bg-muted px-1.5 py-0.5 text-sm;
+  @apply rounded px-1.5 py-0.5 text-sm;
+  background-color: hsl(var(--muted));
+  color: hsl(var(--tw-prose-code));
 }
 
 .prose pre code {
   @apply bg-transparent p-0;
+  color: hsl(var(--tw-prose-pre-code));
+}
+
+/* 粗体文字样式 */
+.prose strong,
+.prose b {
+  color: hsl(var(--tw-prose-bold));
+  font-weight: 600;
 }
 
 /* 链接样式 */
 .prose a {
-  @apply text-primary no-underline hover:underline;
+  color: hsl(var(--tw-prose-links));
+  text-decoration: none;
+}
+
+.prose a:hover {
+  text-decoration: underline;
 }
 
 /* 表格样式 */
 .prose table {
-  @apply w-full border-collapse border border-border;
+  @apply w-full border-collapse border;
+  border-color: hsl(var(--tw-prose-th-borders));
 }
 
 .prose th,
 .prose td {
-  @apply border border-border px-4 py-2 text-left;
+  @apply px-4 py-2 text-left border;
+  border-color: hsl(var(--tw-prose-td-borders));
+  color: hsl(var(--tw-prose-body));
 }
 
 .prose th {
   @apply bg-muted font-semibold;
+  color: hsl(var(--tw-prose-headings));
+}
+
+/* 标题样式 */
+.prose h1,
+.prose h2,
+.prose h3,
+.prose h4,
+.prose h5,
+.prose h6 {
+  color: hsl(var(--tw-prose-headings));
+}
+
+/* 正文样式 */
+.prose p {
+  color: hsl(var(--tw-prose-body));
+}
+
+/* 列表样式 */
+.prose ul li::marker,
+.prose ol li::marker {
+  color: hsl(var(--tw-prose-bullets));
+}
+
+.prose li {
+  color: hsl(var(--tw-prose-body));
 }
 
 /* 引用块样式 */
 .prose blockquote {
-  @apply border-l-4 border-primary bg-muted/50 pl-4 italic;
+  @apply border-l-4 pl-4 italic;
+  border-color: hsl(var(--tw-prose-quote-borders));
+  background-color: hsl(var(--muted) / 0.5);
+  color: hsl(var(--tw-prose-quotes));
 }
 
 /* 滚动条样式 */

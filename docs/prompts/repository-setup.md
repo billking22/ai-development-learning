@@ -63,3 +63,9 @@ Error: Function Runtimes must have a valid version, for example `now-php@1.0.0`.
 ```
 白色主题某些文字还是有问题，让我们查看浏览器完成吧 ，服务已经启动在 http://localhost:3000/docs/mcp/figma
 ```
+
+```
+白色主题下某些文字颜色问题还是没有解决，我指出色号吧 --tw-prose-bold
+
+还有一个是code标签显示的时候 这个色值 --tw-prose-invert-code
+```
