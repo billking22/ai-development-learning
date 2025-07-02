@@ -73,7 +73,7 @@ export default function DocPage({ params }: DocPageProps) {
           <div>
             <h1 className="text-3xl font-bold mb-2">{doc.title}</h1>
             {doc.description && (
-              <p className="text-lg text-muted-foreground">{doc.description}</p>
+              <p className="text-lg text-foreground/70">{doc.description}</p>
             )}
           </div>
           
@@ -101,7 +101,7 @@ export default function DocPage({ params }: DocPageProps) {
           </div>
         </div>
         
-        <div className="flex items-center gap-4 mt-4 text-sm text-muted-foreground">
+        <div className="flex items-center gap-4 mt-4 text-sm text-foreground/60">
           <div className="flex items-center">
             <CalendarDays className="mr-1 h-3 w-3" />
             更新于 {new Date(doc.updatedAt).toLocaleDateString('zh-CN')}
@@ -127,7 +127,7 @@ export default function DocPage({ params }: DocPageProps) {
             </Link>
           </Button>
           
-          <div className="text-sm text-muted-foreground">
+          <div className="text-sm text-foreground/60">
             在 GitHub 上
             <Link
               href={`https://github.com/billking22/ai-development-learning/blob/main/${doc.filePath}`}

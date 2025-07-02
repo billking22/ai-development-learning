@@ -41,7 +41,7 @@ export default function CategoryPage({ params }: CategoryPageProps) {
           <span className="text-3xl">{currentCategory.emoji}</span>
           <h1 className="text-3xl font-bold">{currentCategory.name}</h1>
         </div>
-        <p className="text-lg text-muted-foreground">{currentCategory.description}</p>
+        <p className="text-lg text-foreground/70">{currentCategory.description}</p>
         <div className="mt-4">
           <Badge variant="secondary">
             <FileText className="mr-1 h-3 w-3" />
@@ -70,7 +70,7 @@ export default function CategoryPage({ params }: CategoryPageProps) {
               )}
             </CardHeader>
             <CardContent>
-              <div className="flex items-center text-sm text-muted-foreground">
+              <div className="flex items-center text-sm text-foreground/60">
                 <CalendarDays className="mr-1 h-3 w-3" />
                 {new Date(doc.updatedAt).toLocaleDateString('zh-CN')}
               </div>

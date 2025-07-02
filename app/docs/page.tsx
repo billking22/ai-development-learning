@@ -12,7 +12,7 @@ export default function DocsPage() {
       {/* 页面标题 */}
       <div className="mb-8 text-center">
         <h1 className="text-4xl font-bold mb-4">文档中心</h1>
-        <p className="text-lg text-muted-foreground">
+        <p className="text-lg text-foreground/70">
           探索 AI 开发工具、提示词库和最佳实践
         </p>
       </div>
@@ -20,7 +20,7 @@ export default function DocsPage() {
       {/* 搜索栏 */}
       <div className="mb-8 max-w-md mx-auto">
         <div className="relative">
-          <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground h-4 w-4" />
+          <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-foreground/60 h-4 w-4" />
           <input
             type="text"
             placeholder="搜索文档..."
@@ -72,7 +72,7 @@ export default function DocsPage() {
         <div className="text-center py-12">
           <div className="text-6xl mb-4">📚</div>
           <h3 className="text-lg font-semibold mb-2">暂无文档</h3>
-          <p className="text-muted-foreground">
+          <p className="text-foreground/70">
             文档正在整理中，敬请期待...
           </p>
         </div>
@@ -86,27 +86,27 @@ export default function DocsPage() {
               <div className="text-2xl font-bold text-primary">
                 {categories.length}
               </div>
-              <div className="text-sm text-muted-foreground">分类</div>
+              <div className="text-sm text-foreground/60">分类</div>
             </div>
             <div>
               <div className="text-2xl font-bold text-primary">
                 {categories.reduce((acc, cat) => acc + cat.items.length, 0)}
               </div>
-              <div className="text-sm text-muted-foreground">文档</div>
+              <div className="text-sm text-foreground/60">文档</div>
             </div>
             <div>
               <div className="text-2xl font-bold text-primary">
                 {categories.filter(cat => cat.slug === 'mcp').length > 0 ? 
                   categories.find(cat => cat.slug === 'mcp')?.items.length || 0 : 0}
               </div>
-              <div className="text-sm text-muted-foreground">MCP 工具</div>
+              <div className="text-sm text-foreground/60">MCP 工具</div>
             </div>
             <div>
               <div className="text-2xl font-bold text-primary">
                 {categories.filter(cat => cat.slug === 'prompts').length > 0 ? 
                   categories.find(cat => cat.slug === 'prompts')?.items.length || 0 : 0}
               </div>
-              <div className="text-sm text-muted-foreground">提示词</div>
+              <div className="text-sm text-foreground/60">提示词</div>
             </div>
           </div>
         </div>

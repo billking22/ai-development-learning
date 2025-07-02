@@ -59,3 +59,7 @@ Error: Function Runtimes must have a valid version, for example `now-php@1.0.0`.
 这个是网站的预览链接（ai-development-learning.vercel.app
 ），帮忙完善到package用于github显示。然后我发现在白色主题下，文档内容有些字体颜色是同色的，所以看不清楚
 ```
+
+```
+白色主题某些文字还是有问题，让我们查看浏览器完成吧 ，服务已经启动在 http://localhost:3000/docs/mcp/figma
+```
