@@ -101,7 +101,7 @@ export function Footer() {
         <div className="mt-8 border-t pt-4">
           <div className="flex flex-col items-center justify-between md:flex-row">
             <p className="text-sm text-muted-foreground">
-              © 2024 AI 开发学习分享平台. 基于 MIT 许可证开源.
+              © {new Date().getFullYear()} AI 开发学习分享平台. 基于 MIT 许可证开源.
             </p>
             <p className="mt-2 flex items-center text-sm text-muted-foreground md:mt-0">
               使用 <Heart className="mx-1 h-3 w-3 text-red-500" /> 和 Next.js 构建

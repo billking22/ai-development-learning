@@ -44,3 +44,13 @@
 啊 我们竟然没有没有完善git忽略文件。
 现在产生了新的问题在运行时，让我们修复完成再提交push
 ```
+
+```
+Previous build caches not available
+Cloning completed: 353.000ms
+Running "vercel build"
+Vercel CLI 43.3.0
+Error: Function Runtimes must have a valid version, for example `now-php@1.0.0`.
+现在vercel部署时遇到一个错误，需要修复，如有必要你可以去context7查资料
+对了，还有一个小问题，页脚的年份是错的（© 2024 AI 开发学习分享平台），我们换成动态完成？
+```

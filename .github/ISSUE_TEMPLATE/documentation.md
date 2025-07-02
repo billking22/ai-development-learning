@@ -1,9 +1,9 @@
 ---
 name: 📝 文档改进
 about: 改进或添加文档
-title: "[DOCS] "
-labels: ["documentation", "needs-triage"]
-assignees: ""
+title: '[DOCS] '
+labels: ['documentation', 'needs-triage']
+assignees: ''
 ---
 
 # 📝 文档改进

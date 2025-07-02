@@ -4,11 +4,6 @@
   "framework": "nextjs",
   "installCommand": "pnpm install",
   "devCommand": "pnpm dev",
-  "functions": {
-    "app/**/*.tsx": {
-      "runtime": "nodejs18.x"
-    }
-  },
   "headers": [
     {
       "source": "/(.*)",
@@ -27,11 +22,5 @@
         }
       ]
     }
-  ],
-  "rewrites": [
-    {
-      "source": "/docs/:path*",
-      "destination": "/:path*"
-    }
   ]
-} 
+}
