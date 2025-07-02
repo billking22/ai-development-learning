@@ -54,3 +54,8 @@ Error: Function Runtimes must have a valid version, for example `now-php@1.0.0`.
 现在vercel部署时遇到一个错误，需要修复，如有必要你可以去context7查资料
 对了，还有一个小问题，页脚的年份是错的（© 2024 AI 开发学习分享平台），我们换成动态完成？
 ```
+
+```
+这个是网站的预览链接（ai-development-learning.vercel.app
+），帮忙完善到package用于github显示。然后我发现在白色主题下，文档内容有些字体颜色是同色的，所以看不清楚
+```

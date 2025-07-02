@@ -42,7 +42,7 @@ export const mdxComponents = {
   ),
   p: ({ className, ...props }: React.HTMLAttributes<HTMLParagraphElement>) => (
     <p
-      className={cn('mb-4 leading-7 text-muted-foreground', className)}
+      className={cn('mb-4 leading-7 text-foreground/80', className)}
       {...props}
     />
   ),
@@ -53,12 +53,12 @@ export const mdxComponents = {
     <ol className={cn('mb-4 ml-6 list-decimal space-y-2', className)} {...props} />
   ),
   li: ({ className, ...props }: React.HTMLAttributes<HTMLLIElement>) => (
-    <li className={cn('leading-7 text-muted-foreground', className)} {...props} />
+    <li className={cn('leading-7 text-foreground/80', className)} {...props} />
   ),
   blockquote: ({ className, ...props }: React.HTMLAttributes<HTMLQuoteElement>) => (
     <blockquote
       className={cn(
-        'mb-4 border-l-4 border-primary bg-muted/50 py-2 pl-6 italic',
+        'mb-4 border-l-4 border-primary bg-muted/50 py-2 pl-6 italic text-foreground/90',
         className
       )}
       {...props}
@@ -90,7 +90,7 @@ export const mdxComponents = {
   th: ({ className, ...props }: React.HTMLAttributes<HTMLTableCellElement>) => (
     <th
       className={cn(
-        'border border-border px-4 py-2 text-left font-semibold bg-muted',
+        'border border-border px-4 py-2 text-left font-semibold bg-muted text-foreground',
         className
       )}
       {...props}
@@ -98,7 +98,7 @@ export const mdxComponents = {
   ),
   td: ({ className, ...props }: React.HTMLAttributes<HTMLTableCellElement>) => (
     <td
-      className={cn('border border-border px-4 py-2 text-left', className)}
+      className={cn('border border-border px-4 py-2 text-left text-foreground', className)}
       {...props}
     />
   ),

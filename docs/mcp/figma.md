@@ -48,14 +48,30 @@ Figma MCP (Model Context Protocol) 是一个强大的工具，允许 AI 模型�
 
 ## 🚀 常规使用方式
 
-### 获取 Figma 文件数据
+鼠标右键复制figma的设计链接，交给大模型即可。
 
-```typescript
-// 获取整个Figma文件的结构
-await getFigmaData({
-  fileKey: "your-figma-file-key",
-  nodeId: "optional-specific-node-id",
-});
+- 范围越小越精确
+- 设计稿越规范越容易
+- 尽量表述清楚，有时候需要切割
+
+示例：
+
+```
+让我们用next实现一个新网站，使用pnpm管理，需要自行读取配置主题色，使用prettier格式化，添加eslint检查（换成oxlint，具体了解可以使用context7），使用tailwindcss
+让我们开始，这是其中一个页面的设计：https://www.figma.com/design/9GifbGjxw3xxxxx
+```
+
+```
+@https://www.figma.com/design/9Gifbxxxxx  这个是头部的设计
+@https://www.figma.com/design/9GifbGjxxxxxx  这个是footer的设计
+让我们先按设计完成编码。
+
+然后是中间区域是注册登陆的功能，我贴出来所有的设计，我们需要考虑流程，然后完成组件封装与实现
+@https://www.figma.com/xxxxx
+@https://www.figma.com/xxxxx
+@https://www.figma.com/xxxxx
+@https://www.figma.com/xxxxx
+@https://www.figma.com/xxxxx
 ```
 
 ### 下载设计资源
@@ -63,14 +79,14 @@ await getFigmaData({
 ```typescript
 // 下载图像资源
 await downloadFigmaImages({
-  fileKey: "your-figma-file-key",
+  fileKey: 'your-figma-file-key',
   nodes: [
     {
-      nodeId: "1234:5678",
-      fileName: "icon-home.svg",
+      nodeId: '1234:5678',
+      fileName: 'icon-home.svg',
     },
   ],
-  localPath: "/path/to/assets",
+  localPath: '/path/to/assets',
 });
 ```
 
@@ -125,12 +141,10 @@ FIGMA_TEAM_ID=your-team-id (可选)
 ### 常见问题
 
 1. **API 密钥无效**
-
    - 确认 API 密钥正确且未过期
    - 检查网络连接
 
 2. **文件访问权限**
-
    - 确保 API 密钥有权限访问目标文件
    - 检查文件是否为公开或已共享
 
